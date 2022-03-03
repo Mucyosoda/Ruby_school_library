@@ -6,6 +6,9 @@ AllCops:
     - "Rakefile"
     - "node_modules/**/*"
 
+  Layout/EndOfLine:
+  EnforcedStyle: crlf
+
   DisplayCopNames: true
 
 Layout/LineLength:
