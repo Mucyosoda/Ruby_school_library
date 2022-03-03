@@ -11,7 +11,11 @@ class Book
 
   # method for rental
 
-  def add_rental(person, date)
-    Rental.new(@title, person, date)
+  def add_rental(book)
+    @rentals.push(book)
+  end
+
+  def to_s
+    "Title: \"#{@title}\", Author: #{author}"
   end
 end

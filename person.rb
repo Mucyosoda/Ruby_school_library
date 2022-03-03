@@ -1,5 +1,5 @@
 class Person
-  attr_accessor :id, :name, :age, :parent_permission
+  attr_accessor :id, :name, :age, :parent_permission, :rentals
 
   def initialize(name = 'unknown', age:, parent_permission: true)
     @id = Random.rand(1..500)
@@ -29,5 +29,9 @@ class Person
 
   def validate_name
     @name = @corrector.correct_name(@name)
+  end
+
+  def to_s
+    "Name: #{@name}, ID: #{@id}, Age: #{@age}"
   end
 end
